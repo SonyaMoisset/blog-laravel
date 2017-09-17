@@ -38,7 +38,9 @@
                     </div>
                     
                     <div class="col-sm-6">
-                        {!! Html::linkRoute('posts.update', 'Save Changes', [$post->id], ['class' => 'btn btn-success btn-block']) !!}
+                        {{ csrf_field() }}
+                        {{ method_field('PUT') }}
+                        {{ Form::submit('Save Changes', ['class' => 'btn btn-success btn-block']) }}
                     </div>
                 </div>
             </div>
