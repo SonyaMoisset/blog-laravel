@@ -1,13 +1,22 @@
 @extends('main')
 
-@section('title', '| View Post')
+@section('title', '| Edit Blog Post')
 
 @section('content')
 
     <div class="row">
+        {!! Form::model($post, ['route' => ['posts.update', $post->id]]) !!}
+
         <div class="col-md-8">
-            <h1>{{ $post->title }}</h1>
-            <p class="lead">{{ $post->body }}</p>
+            <div class="form-group">
+                {{ Form::label('title', 'Title:') }}
+                {{ Form::text('title', null, ['class' => 'form-control input-lg']) }}
+            </div>
+
+            <div class="form-group">
+                {{ Form::label('body', 'Body:') }}
+                {{ Form::textarea('body', null, ['class' => 'form-control']) }}
+            </div>
         </div>
 
         <div class="col-md-4">
@@ -25,14 +34,16 @@
 
                 <div class="row">
                     <div class="col-sm-6">
-                        {!! Html::linkRoute('posts.edit', 'Edit', array($post->id), array('class' => 'btn btn-primary btn-block')) !!}
+                        {!! Html::linkRoute('posts.show', 'Cancel', [$post->id], ['class' => 'btn btn-danger btn-block']) !!}
                     </div>
                     <div class="col-sm-6">
-                        {!! Html::linkRoute('posts.destroy', 'Delete', array($post->id), array('class' => 'btn btn-danger btn-block')) !!}
+                        {!! Html::linkRoute('posts.update', 'Save Changes', [$post->id], ['class' => 'btn btn-success btn-block']) !!}
                     </div>
                 </div>
             </div>
         </div>
+        
+        {!! Form::close() !!}
     </div>
 
 @endsection
