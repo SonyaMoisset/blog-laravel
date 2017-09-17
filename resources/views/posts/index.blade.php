@@ -33,9 +33,11 @@
                             <td>{{ $post -> title }}</td>
                             <td>{{ str_limit($post->body, $limit = 75) }}</td>
                             <td>{{ $post->created_at->format('M j, Y')}}</td>
+                            
                             <td>
-                                {!! Html::linkRoute('posts.show', 'View', array($post->id), array('class' => 'btn btn-default btn-sm')) !!}
-                                {!! Html::linkRoute('posts.edit', 'Edit', array($post->id), array('class' => 'btn btn-default btn-sm')) !!}
+                                {!! Html::linkRoute('posts.show', 'View', [$post->id], ['class' => 'btn btn-default btn-sm']) !!}
+
+                                {!! Html::linkRoute('posts.edit', 'Edit', [$post->id], ['class' => 'btn btn-default btn-sm']) !!}
                             </td>
                         </tr>
                     @endforeach

@@ -36,13 +36,14 @@
                     <div class="col-sm-6">
                         {!! Html::linkRoute('posts.show', 'Cancel', [$post->id], ['class' => 'btn btn-danger btn-block']) !!}
                     </div>
+                    
                     <div class="col-sm-6">
                         {!! Html::linkRoute('posts.update', 'Save Changes', [$post->id], ['class' => 'btn btn-success btn-block']) !!}
                     </div>
                 </div>
             </div>
         </div>
-        
+
         {!! Form::close() !!}
     </div>
 
