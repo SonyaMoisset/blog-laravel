@@ -15,37 +15,15 @@
 
     <div class="row">
         <div class="col-md-8">
-            <div class="post">
-                <h3>Post Title</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, recusandae! Aut placeat in omnis quos est sapiente molestiae facere vel mollitia dolore maxime nesciunt similique quod veritatis sit, distinctio itaque?</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
 
-            <hr>
-
-            <div class="post">
-                <h3>Post Title</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, recusandae! Aut placeat in omnis quos est sapiente molestiae facere vel mollitia dolore maxime nesciunt similique quod veritatis sit, distinctio itaque?</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-
-            <hr>
-
-            <div class="post">
-                <h3>Post Title</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, recusandae! Aut placeat in omnis quos est sapiente molestiae facere vel mollitia dolore maxime nesciunt similique quod veritatis sit, distinctio itaque?</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-
-            <hr>
-
-            <div class="post">
-                <h3>Post Title</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, recusandae! Aut placeat in omnis quos est sapiente molestiae facere vel mollitia dolore maxime nesciunt similique quod veritatis sit, distinctio itaque?</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-
-            <hr>
+            @foreach($posts as $post)
+                <div class="post">
+                    <h3>{{ $post->title }}</h3>
+                    <p>{{ str_limit($post->body, $limit = 300) }}</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+                <hr>
+            @endforeach
         </div>
 
         <div class="col-md-3 col-md-offset-1">
