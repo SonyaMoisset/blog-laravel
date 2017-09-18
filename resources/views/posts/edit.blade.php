@@ -38,9 +38,9 @@
                     </div>
                     
                     <div class="col-sm-6">
-                        {{ csrf_field() }}
-                        {{ method_field('PUT') }}
-                        {{ Form::submit('Save Changes', ['class' => 'btn btn-success btn-block']) }}
+                    {!! Form::open(['route' => ['posts.update', $post->id], 'method' => 'PUT']) !!}
+                        {!! Form::submit('Save Changes', ['class' => 'btn btn-success btn-block']) !!}
+                    {!! Form::close() !!}
                     </div>
                 </div>
             </div>
