@@ -26,12 +26,12 @@
 
         <div class="col-md-4">
             <div class="well">
-                <dl class="dl-horizontal">
+                <dl class="dl-vertical">
                     <dt>Created At:</dt>
                     <dd>{{ $post->created_at->format('M j, Y h:ia') }}</dd>
                 </dl>
 
-                <dl class="dl-horizontal">
+                <dl class="dl-vertical">
                     <dt>Last Updated:</dt>
                     <dd>{{ $post->updated_at->format('M j, Y h:ia') }}</dd>
                 </dl>
