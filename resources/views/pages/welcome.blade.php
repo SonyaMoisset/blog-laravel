@@ -15,12 +15,11 @@
 
     <div class="row">
         <div class="col-md-8">
-
             @foreach($posts as $post)
                 <div class="post">
                     <h3>{{ $post->title }}</h3>
                     <p>{{ str_limit($post->body, $limit = 300) }}</p>
-                    <a href="{{ url('blog', $post->slug) }}" class="btn btn-primary">Read More</a>
+                    <a href="{{ route('blog.single', $post->slug) }}" class="btn btn-primary">Read More</a>
                 </div>
                 <hr>
             @endforeach
