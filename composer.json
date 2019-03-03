@@ -6,16 +6,16 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
-        "fideloper/proxy": "~3.3",
+        "fideloper/proxy": "4.0.0",
         "laravel/framework": "5.7.20",
-        "laravel/tinker": "~1.0",
+        "laravel/tinker": "1.0.2",
         "laravelcollective/html": "5.7.1"
     },
     "require-dev": {
-        "filp/whoops": "~2.3",
-        "fzaninotto/faker": "~1.8",
+        "filp/whoops": "2.3.1",
+        "fzaninotto/faker": "1.8.0",
         "mockery/mockery": "1.2.0",
-        "phpunit/phpunit": "~6.5"
+        "phpunit/phpunit": "6.5.14"
     },
     "autoload": {
         "classmap": [
