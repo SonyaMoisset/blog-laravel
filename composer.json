@@ -14,7 +14,7 @@
     "require-dev": {
         "filp/whoops": "2.14.5",
         "fzaninotto/faker": "1.9.1",
-        "mockery/mockery": "1.4.3",
+        "mockery/mockery": "0.9.11",
         "phpunit/phpunit": "11.2.3"
     },
     "autoload": {
