@@ -15,7 +15,7 @@
         "filp/whoops": "2.14.5",
         "fzaninotto/faker": "1.9.1",
         "mockery/mockery": "1.4.3",
-        "phpunit/phpunit": "11.2.3"
+        "phpunit/phpunit": "13.0.2"
     },
     "autoload": {
         "classmap": [
